@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869802851631",
+    "project_id": "beyondableism",
+    "storage_bucket": "beyondableism.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869802851631:android:472f57a4195183d74575da",
+        "android_client_info": {
+          "package_name": "com.beyond_ableism.beyond_ableism"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZCM7ZOCMvwa-jbge58GUVSIR1Xg_RN2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
