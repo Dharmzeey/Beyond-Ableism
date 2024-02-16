@@ -1,4 +1,5 @@
 import 'package:beyond_ableism/core/constants/dimensions.dart';
+import 'package:beyond_ableism/features/users/presentation/widgets/hobbies_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -38,16 +39,20 @@ class ProfilePage extends StatelessWidget {
             ),
             const Text(
               'An Passionate Artist',
-              style: TextStyle(fontWeight: FontWeight.w300),
+              style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
+            ),
+            SizedBox(
+              height: AppDimensions.spacing20,
             ),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                   minimumSize: const Size.fromHeight(50),
                   backgroundColor: Colors.grey.shade100),
-              child: const Text(
+              child: Text(
                 'Edit Profile',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(
+                    color: Colors.black, fontSize: AppDimensions.fontMain),
               ),
             ),
             SizedBox(
@@ -80,6 +85,28 @@ class ProfilePage extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: AppDimensions.fontLarge),
+            ),
+            SizedBox(
+              height: AppDimensions.spacing40,
+            ),
+            SizedBox(
+              height: 300,
+              child: GridView.builder(
+                itemCount: 10,
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: AppDimensions.screenWidth / 2.5,
+                  mainAxisExtent: 70,
+                  childAspectRatio: 3 / 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                ),
+                itemBuilder: (context, index) {
+                  return const HobbiesWidget(
+                    iconType: Icons.bus_alert_outlined,
+                    hobbyType: 'Hiking',
+                  );
+                },
+              ),
             ),
           ],
         ),
