@@ -1,9 +1,9 @@
-import 'package:beyond_ableism/core/constants/dimensions.dart';
-import 'package:beyond_ableism/features/users/presentation/widgets/talent_skill_showcase_widget.dart';
+import 'package:beyond_ableism/config/constants/dimensions.dart';
+import 'package:beyond_ableism/features/community/presentation/widgets/community_post_widget.dart';
 import 'package:flutter/material.dart';
 
-class TalentShowPage extends StatelessWidget {
-  const TalentShowPage({super.key});
+class CommunityPage extends StatelessWidget {
+  const CommunityPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class TalentShowPage extends StatelessWidget {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'Talent and Skill Showcase',
+            'Community',
             style: TextStyle(fontWeight: FontWeight.w900),
           ),
         ),
@@ -21,14 +21,13 @@ class TalentShowPage extends StatelessWidget {
         child: ListView.builder(
           itemCount: 10,
           itemBuilder: (context, index) {
-            return const TalentSkillShowcaseWidget(
+            return const CommunityPostWidget(
                 imageUrl: 'images/avatar.png',
-                authorName: 'Drey',
-                authorAge: '24',
-                datePosted: '1d',
-                postTitle:
-                    'Hey yooooo, Take a look at this life painting I did',
-                mediaURL: 'images/landscape.png',
+                authorName: 'James',
+                authorAge: '19',
+                datePosted: '2d',
+                postContent:
+                    'Does anyone have tips on how to stay positive when you are feeling down??',
                 likesCount: '34',
                 commentsCount: '23');
           },
@@ -39,7 +38,7 @@ class TalentShowPage extends StatelessWidget {
         icon: const Icon(
           Icons.add,
         ),
-        label: const Text('Showcase'),
+        label: const Text('Post'),
       ),
     );
   }

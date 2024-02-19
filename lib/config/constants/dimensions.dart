@@ -17,6 +17,7 @@ class AppDimensions {
 
   static double paddingMain = screenWidth / 20;
 
+  static double fontSmall = screenWidth / 40;
   static double fontMain = screenWidth / 30;
   static double fontLarge = screenWidth / 22;
   static double extraLarge = screenWidth / 17;

@@ -12,7 +12,20 @@
           "package_name": "com.beyond_ableism.beyond_ableism"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "869802851631-cclgk9o3r8uvfsm34ssbjsari5p17ijb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beyond_ableism.beyond_ableism",
+            "certificate_hash": "7b934ee18f946d319ea0e1a80d25dee89d447d62"
+          }
+        },
+        {
+          "client_id": "869802851631-72lg229cferfnctk0od6l3927nv2fs5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAZCM7ZOCMvwa-jbge58GUVSIR1Xg_RN2A"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869802851631-72lg229cferfnctk0od6l3927nv2fs5t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "869802851631-ui6f8phn0a82g52htbibgttlktgoaa77.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.beyondableism.beyondAbleism"
+              }
+            }
+          ]
         }
       }
     }

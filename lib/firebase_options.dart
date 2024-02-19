@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '869802851631',
     projectId: 'beyondableism',
     storageBucket: 'beyondableism.appspot.com',
+    androidClientId: '869802851631-cclgk9o3r8uvfsm34ssbjsari5p17ijb.apps.googleusercontent.com',
+    iosClientId: '869802851631-ui6f8phn0a82g52htbibgttlktgoaa77.apps.googleusercontent.com',
     iosBundleId: 'com.beyondableism.beyondAbleism',
   );
 }

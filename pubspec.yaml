@@ -12,11 +12,13 @@ dependencies:
   firebase_core: ^2.25.4
   cloud_firestore: ^4.15.4
   firebase_auth: ^4.17.4
-  
+  smooth_page_indicator: ^1.1.0
+  get_storage: ^2.1.1
 
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.10
   # video_player: ^2.8.2
 
 dev_dependencies:
@@ -31,6 +33,7 @@ flutter:
   
   assets:
     - images/
+    - images/onboarding/
     - assets/videos/
 
 

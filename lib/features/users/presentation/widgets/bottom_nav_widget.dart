@@ -1,8 +1,8 @@
-import 'package:beyond_ableism/features/users/presentation/pages/community_page.dart';
+import 'package:beyond_ableism/features/community/presentation/pages/community_page.dart';
 import 'package:beyond_ableism/features/users/presentation/pages/help_page.dart';
 import 'package:beyond_ableism/features/users/presentation/pages/main_page.dart';
 import 'package:beyond_ableism/features/users/presentation/pages/profile_page.dart';
-import 'package:beyond_ableism/features/users/presentation/pages/talent_show_page.dart';
+import 'package:beyond_ableism/features/talent_and_skills/presentation/pages/talent_show_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {

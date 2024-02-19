@@ -1,5 +1,5 @@
-import 'package:beyond_ableism/core/constants/dimensions.dart';
-import 'package:beyond_ableism/features/users/presentation/widgets/event_widget.dart';
+import 'package:beyond_ableism/config/constants/dimensions.dart';
+import 'package:beyond_ableism/features/events/presentation/widgets/event_widget.dart';
 import 'package:beyond_ableism/features/users/presentation/widgets/motivation_widget.dart';
 import 'package:flutter/material.dart';
 

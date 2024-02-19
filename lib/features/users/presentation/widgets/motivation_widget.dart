@@ -1,4 +1,4 @@
-import 'package:beyond_ableism/core/constants/dimensions.dart';
+import 'package:beyond_ableism/config/constants/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class MotivationWidget extends StatelessWidget {

@@ -1,9 +1,25 @@
-import 'package:beyond_ableism/features/users/presentation/pages/home_page.dart';
+import 'package:beyond_ableism/features/authentication/data/repositories/authentication_repository.dart';
+// import 'package:beyond_ableism/features/authentication/presentation/pages/onboarding.dart';
+import 'package:beyond_ableism/firebase_options.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+void main() async {
+  final WidgetsBinding widgetsBinding =
+      WidgetsFlutterBinding.ensureInitialized();
+
+// Getx local storage
+  await GetStorage.init();
+
+  // Await splash screen
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  // firebase
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then((FirebaseApp value) => Get.put(AuthenticationRepository()));
   runApp(const MyApp());
 }
 
@@ -25,7 +41,11 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Beyond Ableism',
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      // home: const OnboardingPage(),
+      home: const Scaffold(
+          body: Center(
+        child: CircularProgressIndicator(),
+      )),
     );
   }
 }
