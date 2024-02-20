@@ -1,4 +1,4 @@
-import 'package:beyond_ableism/features/authentication/presentation/pages/login_page.dart';
+import 'package:beyond_ableism/features/authentication/presentation/pages/signin_page.dart';
 import 'package:beyond_ableism/features/authentication/presentation/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +21,7 @@ class OnBoardingController extends GetxController {
     if (currentPageIndex.value == 2) {
       final storage = GetStorage();
       storage.write('isFirstTime', false);
-      Get.offAll(const LoginPage());
+      Get.offAll(const SignIn());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);

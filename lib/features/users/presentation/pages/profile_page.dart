@@ -1,12 +1,15 @@
 import 'package:beyond_ableism/config/constants/dimensions.dart';
+import 'package:beyond_ableism/features/authentication/presentation/getx/signout_controller.dart';
 import 'package:beyond_ableism/features/users/presentation/widgets/hobbies_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignOutController());
     return Scaffold(
       appBar: AppBar(
         title: const Center(
@@ -106,6 +109,22 @@ class ProfilePage extends StatelessWidget {
                     hobbyType: 'Hiking',
                   );
                 },
+              ),
+            ),
+            SizedBox(
+              height: AppDimensions.spacing20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                controller.signOut();
+              },
+              style: ElevatedButton.styleFrom(
+                  minimumSize: const Size.fromHeight(50),
+                  backgroundColor: Colors.grey.shade100),
+              child: Text(
+                'Logout',
+                style: TextStyle(
+                    color: Colors.black, fontSize: AppDimensions.fontMain),
               ),
             ),
           ],

@@ -2,16 +2,22 @@ import 'package:flutter/material.dart';
 
 class OnBoardingTextWidget extends StatelessWidget {
   const OnBoardingTextWidget(
-      {super.key, required this.label, required this.inputController, required this.icon});
+      {super.key,
+      required this.label,
+      required this.inputController,
+      required this.icon,
+      this.validatorFn});
 
   final String label;
   final IconData icon;
   final TextEditingController inputController;
+  final dynamic validatorFn;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: inputController,
+      validator: validatorFn,
       decoration: InputDecoration(
         prefixIcon: Icon(icon),
         filled: true,
@@ -30,15 +36,17 @@ class OnBoardingTextWidget extends StatelessWidget {
 
 class OnBoardingPasswordTextWidget extends StatelessWidget {
   const OnBoardingPasswordTextWidget(
-      {super.key, required this.label, required this.inputController});
+      {super.key, required this.label, required this.inputController, this.validatorFn});
 
   final String label;
   final TextEditingController inputController;
+  final dynamic validatorFn;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: inputController,
+      validator: validatorFn,
       obscureText: true,
       decoration: InputDecoration(
         prefixIcon: const Icon(Icons.key),

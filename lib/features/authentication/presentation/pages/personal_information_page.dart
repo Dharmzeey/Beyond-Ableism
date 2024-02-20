@@ -1,6 +1,5 @@
 import 'package:beyond_ableism/config/constants/dimensions.dart';
 import 'package:beyond_ableism/features/authentication/presentation/widgets/onboarding_text_input_widget.dart';
-import 'package:beyond_ableism/features/users/presentation/widgets/text_input_widget.dart';
 import 'package:flutter/material.dart';
 
 class PersonalInformationPage extends StatefulWidget {

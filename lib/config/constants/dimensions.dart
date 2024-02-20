@@ -14,6 +14,7 @@ class AppDimensions {
   static double width300 = screenWidth / 2;
   static double width150 = screenWidth / 4;
   static double width80 = screenWidth / 7.5;
+  static double width50 = screenWidth / 12;
 
   static double paddingMain = screenWidth / 20;
 

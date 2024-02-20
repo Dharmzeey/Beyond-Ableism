@@ -1,21 +1,18 @@
-# beyond_ableism
+# Beyond Ableism
 
-A place where everone is important 
+A community where everyone is important
 
 ## Getting Started
 
-clone or download the file 
+flutter sdk requirements ``` sdk: '>=3.2.3 <4.0.0' ```
 
-- Run ```flutter pub get```
+- Clone or download the file 
+
+- Navigate (cd) into the folder Beyond Ableism
+
+- Run ```flutter pub get``` to install and activate all dependencies
 
 
 ### Third party libraries
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

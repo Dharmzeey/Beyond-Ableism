@@ -19,6 +19,8 @@ dependencies:
   get: ^4.6.6
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.3.10
+  connectivity_plus: ^5.0.2
+  google_sign_in: ^6.2.1
   # video_player: ^2.8.2
 
 dev_dependencies:
@@ -34,7 +36,7 @@ flutter:
   assets:
     - images/
     - images/onboarding/
-    - assets/videos/
+    # - assets/videos/
 
 
   # fonts:
