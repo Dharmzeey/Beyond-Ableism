@@ -36,6 +36,9 @@ flutter:
   assets:
     - images/
     - images/onboarding/
+    - images/volunteers/
+    - images/talents/
+    - images/talentMedia/
     # - assets/videos/
 
 

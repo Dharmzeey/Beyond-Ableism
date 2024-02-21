@@ -6,7 +6,6 @@ class CommunityPostWidget extends StatelessWidget {
       {super.key,
       required this.imageUrl,
       required this.authorName,
-      required this.authorAge,
       required this.datePosted,
       required this.postContent,
       required this.likesCount,
@@ -14,7 +13,6 @@ class CommunityPostWidget extends StatelessWidget {
 
   final String imageUrl;
   final String authorName;
-  final String authorAge;
   final String datePosted;
   final String postContent;
   final String likesCount;
@@ -30,8 +28,8 @@ class CommunityPostWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(AppDimensions.screenWidth),
               child: Image.asset(
                 imageUrl,
-                width: 100,
-                height: 100,
+                width: AppDimensions.width80,
+                height: AppDimensions.width80,
               ),
             ),
             SizedBox(
@@ -40,16 +38,7 @@ class CommunityPostWidget extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Text(authorName),
-                    const Text(','),
-                    SizedBox(
-                      width: AppDimensions.spacing5,
-                    ),
-                    Text(authorAge),
-                  ],
-                ),
+                Text(authorName),
                 Text(
                   datePosted,
                   style: const TextStyle(fontWeight: FontWeight.w200),

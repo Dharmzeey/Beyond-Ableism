@@ -42,7 +42,7 @@ class SignupController extends GetxController {
       await userRepository.saveUserDetails(user);
 
       Get.snackbar('Success', 'Account Created, please login');
-      Get.offAll(() => const SignIn());
+      Get.offAll(() => const SignInPage());
     } catch (e) {
       Get.snackbar('Oh Yep', e.toString());
     } finally {}

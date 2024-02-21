@@ -17,7 +17,9 @@ class HobbiesWidget extends StatelessWidget {
         children: [
           Icon(iconType),
           const SizedBox(width: 5),
-          Text(hobbyType),
+          Flexible(
+            child: Text(hobbyType),
+          ),
         ],
       ),
     );

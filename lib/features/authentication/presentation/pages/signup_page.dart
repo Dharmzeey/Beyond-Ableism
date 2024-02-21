@@ -1,3 +1,4 @@
+import 'package:beyond_ableism/config/constants/colors.dart';
 import 'package:beyond_ableism/config/constants/dimensions.dart';
 import 'package:beyond_ableism/features/authentication/presentation/getx/signup_controller.dart';
 import 'package:beyond_ableism/features/authentication/presentation/widgets/onboarding_button_widget.dart';
@@ -120,7 +121,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 OnBoardingButtonWidget(
                   onpressed: controller.signup,
                   text: 'Create Account',
-                  bgcolor: const Color.fromARGB(255, 37, 109, 168),
+                  bgcolor: AppColors.buttonColor,
                 ),
                 SizedBox(
                   height: AppDimensions.spacing10,

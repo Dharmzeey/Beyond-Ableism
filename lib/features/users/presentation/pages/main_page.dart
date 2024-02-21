@@ -1,13 +1,16 @@
 import 'package:beyond_ableism/config/constants/dimensions.dart';
 import 'package:beyond_ableism/features/events/presentation/widgets/event_widget.dart';
+import 'package:beyond_ableism/features/users/presentation/getx/user_controller.dart';
 import 'package:beyond_ableism/features/users/presentation/widgets/motivation_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -16,17 +19,47 @@ class MainPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: AppDimensions.spacing200),
-                child: const Row(
+                padding: EdgeInsets.only(left: AppDimensions.spacing10),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Center(
-                      child: Text(
-                        'Motivation',
-                        style: TextStyle(fontWeight: FontWeight.w900),
-                      ),
+                    Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius:
+                              BorderRadius.circular(AppDimensions.screenWidth),
+                          child: Image.asset(
+                            'images/avatar.png',
+                            width: AppDimensions.width50,
+                            height: AppDimensions.width50,
+                          ),
+                        ),
+                        SizedBox(
+                          width: AppDimensions.spacing10,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'Dear ',
+                              style:
+                                  TextStyle(fontSize: AppDimensions.fontSmall),
+                            ),
+                            Obx(
+                              () => Text(
+                                controller.user.value.firstName,
+                                style: TextStyle(
+                                    fontSize: AppDimensions.fontSmall),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    Icon(Icons.search),
+                    const Text(
+                      'Motivation',
+                      style: TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                    const Icon(Icons.search),
                   ],
                 ),
               ),
@@ -98,8 +131,9 @@ class MainPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Image(
-                    image: AssetImage('images/alex.png'),
+                  Image(
+                    image: const AssetImage('images/alex.png'),
+                    width: AppDimensions.width200,
                   ),
                 ],
               ),

@@ -12,7 +12,12 @@ flutter sdk requirements ``` sdk: '>=3.2.3 <4.0.0' ```
 
 - Run ```flutter pub get``` to install and activate all dependencies
 
+- Run ```flutter run``` to run the app 
 
-### Third party libraries
+-  ```flutter build apk``` to build the apk version
+
+- ```flutter install``` to install the build
 
 
+
+- This App is still in development, thanks for exploring 🥰🥰🥰

@@ -6,7 +6,6 @@ class TalentSkillShowcaseWidget extends StatelessWidget {
       {super.key,
       required this.imageUrl,
       required this.authorName,
-      required this.authorAge,
       required this.datePosted,
       required this.postTitle,
       required this.likesCount,
@@ -15,7 +14,6 @@ class TalentSkillShowcaseWidget extends StatelessWidget {
 
   final String imageUrl;
   final String authorName;
-  final String authorAge;
   final String datePosted;
   final String postTitle;
   final String mediaURL;
@@ -32,8 +30,8 @@ class TalentSkillShowcaseWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(AppDimensions.screenWidth),
               child: Image.asset(
                 imageUrl,
-                width: 100,
-                height: 100,
+                width: AppDimensions.width80,
+                height: AppDimensions.width80,
               ),
             ),
             SizedBox(
@@ -42,15 +40,9 @@ class TalentSkillShowcaseWidget extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Text(authorName),
-                    const Text(','),
-                    SizedBox(
-                      width: AppDimensions.spacing5,
-                    ),
-                    Text(authorAge),
-                  ],
+                Text(authorName),
+                SizedBox(
+                  width: AppDimensions.spacing5,
                 ),
                 Text(
                   datePosted,

@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class UserModel {
   final String id;
   // final String shortIntro;
@@ -6,7 +8,7 @@ class UserModel {
   // final String hobbies;
   String firstName;
   String lastName;
-  final String username;
+  String username;
   final String email;
   String phoneNumber;
   String address;
@@ -27,6 +29,15 @@ class UserModel {
 
   String get fullName => '$firstName $lastName';
 
+  static UserModel empty() => UserModel(
+      username: '',
+      phoneNumber: '',
+      id: '',
+      firstName: '',
+      lastName: '',
+      address: '',
+      email: '');
+
 // Convert to json to store in Firebase
   Map<String, dynamic> toJson() {
     return {
@@ -39,20 +50,20 @@ class UserModel {
     };
   }
 
-  // factory UserModel.fromSnapshot(
-  //     DocumentSnapshot<Map<String, dynamic>> document) {
-  //   if (document.data() != null) {
-  //     final data = document.data()!;
-  //     return UserModel(
-  //       id: document.id,
-  //       firstName: data['FirstName'] ?? '',
-  //       lastName: data['LastName'] ?? '',
-  //       username: data['Username'] ?? '',
-  //       email: data['Email'] ?? '',
-  //       phoneNumber: data['PhoneNumber'] ?? '',
-  //       address: data['Address'] ?? '',
-  //     );
-  //   }
-  //   return '';
-  // }
+  factory UserModel.fromSnapshot(
+      DocumentSnapshot<Map<String, dynamic>> document) {
+    if (document.data() != null) {
+      final data = document.data()!;
+      return UserModel(
+        id: document.id,
+        firstName: data['FirstName'] ?? '',
+        lastName: data['LastName'] ?? '',
+        username: data['Username'] ?? '',
+        email: data['Email'] ?? '',
+        phoneNumber: data['PhoneNumber'] ?? '',
+        address: data['Address'] ?? '',
+      );
+    }
+    return UserModel.empty();
+  }
 }

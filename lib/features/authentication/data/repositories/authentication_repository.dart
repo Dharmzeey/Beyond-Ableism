@@ -1,5 +1,6 @@
 import 'package:beyond_ableism/features/authentication/presentation/pages/signin_page.dart';
 import 'package:beyond_ableism/features/authentication/presentation/pages/onboarding.dart';
+import 'package:beyond_ableism/features/users/data/repositories/user_repositories.dart';
 // import 'package:beyond_ableism/features/authentication/presentation/pages/verify_email_page.dart';
 import 'package:beyond_ableism/features/users/presentation/pages/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -13,6 +14,9 @@ class AuthenticationRepository extends GetxController {
 
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+
+  // Get Authenticated User Data
+  User? get authUser => _auth.currentUser;
 
   @override
   void onReady() {
@@ -32,7 +36,7 @@ class AuthenticationRepository extends GetxController {
     } else {
       deviceStorage.writeIfNull('isFirstTime', true);
       deviceStorage.read('isFirstTime') != true
-          ? Get.offAll(() => const SignIn())
+          ? Get.offAll(() => const SignInPage())
           : Get.off(() => const OnBoardingPage());
     }
   }
@@ -101,11 +105,34 @@ class AuthenticationRepository extends GetxController {
     try {
       await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
-      Get.offAll(() => const SignIn());
+      Get.offAll(() => const SignInPage());
     } on FirebaseAuthException catch (e) {
       throw e.code;
     } catch (e) {
       throw 'Something went wrong $e';
+    }
+  }
+
+  // [ReAuthentication]
+  Future<void> reauthenticateWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      AuthCredential credential =
+          EmailAuthProvider.credential(email: email, password: password);
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } catch (e) {
+      throw 'something wrong';
+    }
+  }
+
+  Future<void> deleteAccount() async {
+    try {
+      // Delete Firestore first
+      await UserRepository.instance.deleteUserData(_auth.currentUser!.uid);
+      // Then delete from auth
+      await _auth.currentUser?.delete();
+    } catch (e) {
+      throw 'something wrong';
     }
   }
 }

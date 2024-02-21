@@ -36,16 +36,16 @@ class VolunteerWidget extends StatelessWidget {
             children: [
               Text(
                 '$volunteer, $distance miles away',
-                style: const TextStyle(
+                style: TextStyle(
                     color: Colors.black,
-                    fontSize: 20,
+                    fontSize: AppDimensions.fontMain,
                     fontWeight: FontWeight.w900),
               ),
               Text(
-                'can offer $offers',
+                'can help with $offers',
                 style: TextStyle(
                     color: Colors.grey.shade500,
-                    fontSize: 20,
+                    fontSize: AppDimensions.fontSmall,
                     fontWeight: FontWeight.w900),
               ),
             ],

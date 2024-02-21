@@ -7,14 +7,14 @@ import 'package:beyond_ableism/features/authentication/presentation/widgets/onbo
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignInPageState extends State<SignInPage> {
   // final _formKey = GlobalKey<FormState>();
   // late final TextEditingController _email;
   // late final TextEditingController _password;
@@ -146,7 +146,6 @@ class _SignInState extends State<SignIn> {
                 Center(
                   child: ElevatedButton(
                     onPressed: () {
-                      print('Ima');
                       controller.googleSIgnIn();
                     },
                     child: Image(
