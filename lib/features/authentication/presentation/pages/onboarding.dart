@@ -16,26 +16,28 @@ class OnBoardingPage extends StatelessWidget {
     return Scaffold(
       body: Stack(children: [
         PageView(
-          controller: controller.pageController,
-          onPageChanged: controller.updatePageIndicator,
-          children: const [
-            OnboardingWidget(
-              imageURL: 'images/onboarding/ob1.jpg',
-              title: 'Welcome to a place where everyone is equal',
-              subtitle: 'Welcome to a place where everyone is equal',
-            ),
-            OnboardingWidget(
-              imageURL: 'images/onboarding/ob2.jpg',
-              title: 'Welcome to a place where everyone is equal',
-              subtitle: 'Welcome to a place where everyone is equal',
-            ),
-            OnboardingWidget(
-              imageURL: 'images/onboarding/ob3.jpg',
-              title: 'Welcome to a place where everyone is equal',
-              subtitle: 'Welcome to a place where everyone is equal',
-            )
-          ],
-        ),
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
+            children: const [
+              OnboardingWidget(
+                imageURL: 'images/onboarding/ob1.jpg',
+                title: 'Welcome to Beyond Ableism',
+                subtitle:
+                    'A community where abilities shine and diversity thrives.',
+              ),
+              OnboardingWidget(
+                imageURL: 'images/onboarding/ob2.jpg',
+                title: 'Empowering Every Voice',
+                subtitle:
+                    'Discover a platform where inclusivity is the language we speak.',
+              ),
+              OnboardingWidget(
+                imageURL: 'images/onboarding/ob3.jpg',
+                title: 'Beyond Limits, Beyond Labels',
+                subtitle:
+                    'Breaking barriers, fostering connections, and embracing diversity.',
+              ),
+            ]),
         const OnBordingSkipWidget(),
         const OnBoardingDotNavigation(),
         const OnBoardingNextWidget()

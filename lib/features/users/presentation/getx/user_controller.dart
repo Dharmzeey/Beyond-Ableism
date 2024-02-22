@@ -94,7 +94,9 @@ class UserController extends GetxController {
           Get.offAll(() => const SignInPage());
         } else if (provider == 'password') {
           Get.to(() => const DeleteAccount());
+          Get.snackbar('Done', 'Account Deleted Successfuly');
         }
+        Get.snackbar('Done', 'Account Deleted Successfuly');
       }
     } catch (e) {
       Get.snackbar('Oh yeez', e.toString());
@@ -103,7 +105,9 @@ class UserController extends GetxController {
 
   Future<void> userReAuthenticateEmailAndPassword() async {
     try {
-      await AuthenticationRepository.instance.reauthenticateWithEmailAndPassword(verifyEmail.text.trim(), verifyPassword.text.trim());
+      await AuthenticationRepository.instance
+          .reauthenticateWithEmailAndPassword(
+              verifyEmail.text.trim(), verifyPassword.text.trim());
       await AuthenticationRepository.instance.deleteAccount();
       Get.offAll(() => const SignInPage());
     } catch (e) {

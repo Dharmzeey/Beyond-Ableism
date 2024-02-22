@@ -1,5 +1,31 @@
 class CommunityPost {
   static List<Map<String, dynamic>> communityPosts = [
+    {"image": "images/talents/female3.jpg",
+      "username": "FaVOUR",
+      "content":
+          "If anyone needs a prosthetic, let me know as a donor is coming to my place of work tomorrow",
+      "likesCount": '12',
+      "commentCount": '9',
+      "hoursAgo": '20 Minutes ago',
+    },
+    {
+      "image": "images/talents/female3.jpg",
+      "username": "Favour",
+      "content":
+          "Hello, Good News, do you know anyone who is struggling to land a work and is ready to work from home for a translation company? The person must be fluent in English and Yoruba. Send your cv to this mail",
+      "likesCount": '29',
+      "commentCount": '19',
+      "hoursAgo": '25 Minutes ago',
+    },
+    {
+      "image": "images/talents/male3.jpg",
+      "username": "Ade",
+      "content":
+          "I intend to start a business with a small capital, what business can I venture into and What do you have to say about it, I await your comments",
+      "likesCount": '35',
+      "commentCount": '8',
+      "hoursAgo": '1 Hours ago',
+    },
     {
       "image": "images/talents/male1.jpg",
       "username": "SunnySmiles",
